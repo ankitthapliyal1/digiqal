@@ -1,1 +1,124 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
+
+
+
+
+* {
+
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+p {
+  font-size: 14px;
+}
+
+.mat-menu-content:not(:empty) {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  min-width: 205px;
+ 
+}
+
+
+
+
+
+.pointer {
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.error {
+  color: red;
+  font-size: 11px;
+}
+
+.bannerheight{
+  width: 100%;
+  height: 381px;
+}
+
+.heading{
+  color: white;
+  font-size: 50px;
+  font-weight: bolder;
+  position: absolute;
+  top: 40%;
+  left: 12%; 
+}
+
+
+
+.btn {
+  background-color: #23A8F4;
+  border: none;
+  padding: 8px 21px;
+  color: white;
+  font-size: 14px;
+  border-radius: 0%;
+}
+
+.smallTxt {
+  font-size: small;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.color {
+  color: #23A8F4;
+}
+
+
+@media screen and (max-width:600px){
+
+  .heading{
+      font-size: 25px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:host ::ng-deep .ControlBar_module_progressBarAndButtons__d8a96efe{
+  background-color: #23A8F4 !important;
+}
+
+
+:host ::ng-deep .player.player-lg .Text_module_bpxs_fontlg__d3c3c3aa, .player.player-md .Text_module_bpxs_fontlg__d3c3c3aa, .player.player-sm .Text_module_bpxs_fontlg__d3c3c3aa, .player.player-xl .Text_module_bpxs_fontlg__d3c3c3aa, .player.player-xs .Text_module_bpxs_fontlg__d3c3c3aa, .player.player-xxl .Text_module_bpxs_fontlg__d3c3c3aa {
+  font-size: 16px;
+  display: none !important;
+}
+
+:host ::ng-deep .Title_module_title__b6a94de7 .Title_module_header__b6a94de7 .Title_module_subtitle__b6a94de7 {
+  display: inline-flex;
+  align-items: baseline;
+  padding: 0.5em 1em;
+  margin: 0;
+  display: none !important;
+}
+
+
+:host ::ng-deep .SideDock_module_root__71905116, .SideDock_module_root__71905116 .SideDock_module_sidedockInner__71905116 {
+  transition: opacity .25s ease-out;
+  display: none !important;
+}

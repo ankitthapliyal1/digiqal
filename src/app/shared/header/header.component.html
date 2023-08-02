@@ -1,0 +1,139 @@
+<!-- <script src="">
+    $(document).ready(function($) {
+    $('.links').click(function() {
+      $("#myTopnav").removeClass("responsive");
+    });
+  });
+ </script> -->
+
+
+
+<div class=" topnav" id="myTopnav" >
+    <div class="topnav2">
+
+        <div class="" (click)="showSearch(true)">
+            <a routerLink="" class="active pointer"><img class="logo" src="assets/img/logo.png" alt=""></a>
+
+            <a class="item mt-2 pointer" [matMenuTriggerFor]="menu1">Insights</a>
+            <mat-menu #menu1="matMenu" class="customize1">
+
+                <button mat-menu-item (click)="myFunction()">Resources</button>
+                <button mat-menu-item (click)="myFunction()">Podcast</button>
+                <button mat-menu-item (click)="myFunction()">Montserrat</button>
+                <button mat-menu-item (click)="myFunction()">Forum</button>
+                <button mat-menu-item (click)="myFunction()">Blog</button>
+
+            </mat-menu>
+
+
+            <a class=" mt-2 pointer" [matMenuTriggerFor]="menu2">Services</a>
+            <mat-menu #menu2="matMenu" class="customize1">
+
+                <button mat-menu-item [matMenuTriggerFor]="menu3group1">Enterprise IT</button>
+                <mat-menu #menu3group1="matMenu" class="customize1">
+                    <!-- <button mat-menu-item (click)="myFunction()">Item 1</button>
+                    <button mat-menu-item (click)="myFunction()">Item 2</button> -->
+                </mat-menu>
+                <button mat-menu-item (click)="myFunction()">Cloud</button>
+                <button mat-menu-item (click)="myFunction()">Gaming</button>
+                <button mat-menu-item [matMenuTriggerFor]="menu3group2">Digiqal Consulting</button>
+                <mat-menu #menu3group2="matMenu" class="customize1">
+                    <!-- <button mat-menu-item (click)="myFunction()">Item 1</button>
+                    <button mat-menu-item (click)="myFunction()">Item 2</button> -->
+                </mat-menu>
+                <button mat-menu-item (click)="myFunction()">Data & Intelligence</button>
+                <button mat-menu-item (click)="myFunction()">Customer Success</button>
+
+
+            </mat-menu>
+
+
+
+
+
+            <a class=" mt-2 pointer" [matMenuTriggerFor]="menu3">Platforms</a>
+            <mat-menu #menu3="matMenu" class="customize1">
+                <!-- <button mat-menu-item (click)="myFunction()">Qomet</button> -->
+                <a href="https://xerra.in" target="_blank" mat-menu-item (click)="myFunction()">Xerra </a>
+                <a href=" https://enixo.in" target="_blank" mat-menu-item (click)="myFunction()">Enixo Games</a>
+                <button mat-menu-item (click)="myFunction()">Blərb</button>
+                <a href="https://complexcode.in" target="_blank" mat-menu-item (click)="myFunction()">Complex Code</a>
+                <!-- <button mat-menu-item (click)="myFunction()">Illumial Systems</button> -->
+
+            </mat-menu>
+
+
+            <a class=" mt-2 pointer" [matMenuTriggerFor]="menu4">Industries</a>
+            <mat-menu #menu4="matMenu" class="customize1">
+
+                <button mat-menu-item [matMenuTriggerFor]="menu2group1">CPG & Retails</button>
+                <mat-menu #menu2group1="matMenu" class="customize1">
+                    <!-- <button mat-menu-item (click)="myFunction()">Item 1</button>
+                    <button mat-menu-item (click)="myFunction()">Item 2</button> -->
+                </mat-menu>
+                <button mat-menu-item (click)="myFunction()">Healthcare</button>
+                <button mat-menu-item (click)="myFunction()">Utilities</button>
+                <button mat-menu-item (click)="myFunction()">Banking & Financial</button>
+                <button mat-menu-item [matMenuTriggerFor]="menu2group2">Manufacturing</button>
+                <mat-menu #menu2group2="matMenu" class="customize1">
+                    <!-- <button mat-menu-item (click)="myFunction()">Item 1</button>
+                    <button mat-menu-item (click)="myFunction()">Item 2</button> -->
+                </mat-menu>
+                <button mat-menu-item (click)="myFunction()">Media & Entertainments</button>
+                <button mat-menu-item (click)="myFunction()">Hi-Tech</button>
+
+
+            </mat-menu>
+
+            <a class=" mt-2 pointer" [matMenuTriggerFor]="menu5">About Digiqal</a>
+            <mat-menu #menu5="matMenu" class="customize1">
+                <button mat-menu-item [routerLink]="'aboutUs'" (click)="myFunction()">Company Overview</button>
+                <button mat-menu-item [routerLink]="'newsroom'" (click)="myFunction()">News & Events</button>
+                <button mat-menu-item (click)="myFunction()">Investors</button>
+                <button mat-menu-item [routerLink]="'newsroom'" (click)="myFunction()">Awards & Recognition</button>
+                <button mat-menu-item (click)="myFunction()">Alliances</button>
+                <button mat-menu-item [routerLink]="'career'" (click)="myFunction()">Careers</button>
+                <button mat-menu-item (click)="myFunction()">Social Responsibility</button>
+
+
+
+            </mat-menu>
+        </div>
+
+
+        <div class="">
+            <a (click)="showSearch(true)" class=" mailbox mt-2" [matMenuTriggerFor]="earth">
+                 <!-- <img class="img pointer"
+                    src="assets/img/worldwide.png" alt=""> -->
+                    <span class="color pointer">India</span>
+                   
+                </a>
+            <mat-menu #earth="matMenu" class="customize" >
+                <!-- <button mat-menu-item>India</button> -->
+                <button mat-menu-item>Australia</button>
+                <button mat-menu-item>United States</button>
+                <button mat-menu-item>United Kingdoms</button>
+            </mat-menu>
+
+
+            <a [hidden]="search"><input style="position: relative;"  class="form-control mt-1" type="text" placeholder="Enter keyword…"></a>
+            <a *ngIf="search == true" class=" mt-2 pointer">
+                <!-- <input [hidden]="search" class="form-control mt-1" type="text" placeholder="Enter keyword…"> -->
+                <img  (click)="showSearch(false)" src="assets/img/search.png" alt="">
+            </a>
+            <a *ngIf="search == false" class=" mt-2 pointer" style="position: absolute; right: 25px;">
+                <!-- <input [hidden]="search" class="form-control mt-1" type="text" placeholder="Enter keyword…"> -->
+                <img  (click)="showSearch(true)" src="assets/img/search.png" alt="">
+            </a>
+
+
+        </div>
+
+        <a (click)="showSearch(true)" href="javascript:void(0);" class="icon" (click)="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+
+    </div>
+
+
+</div>

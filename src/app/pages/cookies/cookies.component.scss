@@ -1,0 +1,34 @@
+.heading{
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+    position: absolute;
+    top: 35%;
+    left: 12%;  
+}
+
+.qq-privacy{
+ width: 90%;
+ margin:  50px  auto;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+
+
+
+
+@media screen and (max-width:600px){
+
+    .heading{
+        font-size: 25px;
+    }
+
+}

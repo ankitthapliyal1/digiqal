@@ -1,0 +1,135 @@
+
+<div class="container">
+    <div class="text-center mt-5">
+        <h3>Let’s Talk About Your Challenge</h3>
+    </div>
+
+
+    <form #formData="ngForm" (ngSubmit)="onSubmit(formData)" >
+
+       <div class="d-flex mt-5 justify-content-between">
+        <div class="" style="width: 45%;">
+            <div>
+                <label for="">Full Name*</label> <br>
+                <input #namee="ngModel" class="form " ngModel name="name" type="text" required>
+                <div *ngIf="!namee?.valid && (formData.submitted || namee?.touched || namee?.dirty)"
+                  >
+                  <span *ngIf="namee.errors?.['required']" class="error">
+                    Name is Required
+                  </span>
+                </div>
+            </div>
+    
+            <div>
+                <label for="">Mobile*</label> <br>
+                <input #mobilee="ngModel" class="form" ngModel name="mobile" type="number" required>
+                <div *ngIf="!mobilee?.valid && (formData.submitted || mobilee?.touched || mobilee?.dirty)"
+                >
+                <span *ngIf="mobilee.errors?.['required']" class="error">
+                  Mobile is Required
+                </span>
+              </div>
+            </div>
+    
+            <div>
+                <label for="">Email ID*</label> <br>
+                <input #emaill="ngModel" class="form" ngModel name="email" type="email" required email pattern>
+                <div *ngIf="!emaill?.valid && (formData.submitted || emaill?.touched || emaill?.dirty)"
+                  >
+                  <span *ngIf="emaill.errors?.['required']" class="error">
+                    Email is Required
+                  </span>
+                  <span *ngIf="emaill.errors?.['email']" class="error">
+                    Invalid Email Address
+                </span>
+                </div>
+            </div>
+    
+            <div>
+                <label for="">Company Name*</label> <br>
+                <input #companyy="ngModel" class="form" ngModel name="company" type="text" required>
+                <div *ngIf="!companyy?.valid && (formData.submitted || companyy?.touched || companyy?.dirty)"
+                >
+                <span *ngIf="companyy.errors?.['required']" class="error">
+                    Company Name is Required
+                </span>
+              </div>
+                
+            </div>
+    
+            <div>
+                <label for="">Message*</label> <br>
+                <input  class="form " ngModel name="message" type="text" required>
+                <div *ngIf="!companyy?.valid && (formData.submitted || companyy?.touched || companyy?.dirty)"
+                >
+                <span *ngIf="companyy.errors?.['required']" class="error">
+                    Company Name is Required
+                </span>
+              </div>     
+            </div>
+    
+    
+        </div>
+        
+
+        <div class=" mt-2" style="width: 45%;">
+            
+        <div>
+            <label for="">Country*</label> <br>
+            <select class="form1" ngModel name="country" id="" required>
+                <option value="" selected disabled  >Please Select..</option>
+                <option value="india">India</option>
+                <option value="us">US</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="">Your Industry*</label> <br>
+            <select class="form1" ngModel name="industry" id="" required>
+                <option  value="" selected disabled >Please Select..</option>
+                <option value="it">Information Technology</option>
+                <option value="business">Business</option>
+                <option value="gaming">Gaming</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="">Interested in*</label> <br>
+            <select class="form1" ngModel name="intrest" id="" required>
+                <option  value="" selected disabled >Please Select..</option>
+                <option value="games">Games</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="">Referred by</label> <br>
+            <input  class="form1" ngModel name="referred"  type="text">
+        </div>
+
+        <div>
+            <label for="">Upload (Optional)</label> <br>
+            <input  class="form1" ngModel name="file" type="file" >
+        </div>
+       
+
+
+
+        </div>
+       </div>
+
+       <div>
+        <div class=" mt-5">
+          
+        <p class="term"> <input type="checkbox" ngModel name="notifications" id="" >   I would like to receive information about Digital’s products, services, events and newsletters.</p>
+
+        </div>
+        <p class="term">By submitting this form, I hereby provide my consent to Digiqal to contact me based on the information provided above. Click here to read our full policy. </p>
+       </div>
+
+       <div class="text-center">
+        <button class="submitBtn mx-3" type="submit">Submit</button>
+       </div>
+
+    </form>
+
+</div>

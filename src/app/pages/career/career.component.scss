@@ -1,0 +1,84 @@
+.secondDiv {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.heading{
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    position: absolute;
+    top: 40%;
+    left: 5%; 
+}
+
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+
+.thirdDiv {
+    background-color: #F5F5F5;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.jobs {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px 10px;
+}
+
+
+.journey {
+    display: flex;
+    justify-content: center;
+    //   flex-wrap: wrap;
+    //   margin-top:25px ;
+
+
+}
+
+.journey1 {
+    width: 40%;
+    padding: 50px;
+}
+
+.journey2 {
+    width: 40%;
+    padding: 30px;
+}
+
+@media screen and (max-width:'700px') {
+    .jobs {
+        display: block;
+    }
+
+   .journey{
+    flex-wrap: wrap;
+   }
+   .journey1 {
+    width: 100%;
+}
+
+.journey2 {
+    width: 100%;
+}
+}
+
+
+@media screen and (max-width:600px){
+
+    .heading{
+        font-size: 20px;
+    }
+}
